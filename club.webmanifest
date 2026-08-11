@@ -1,0 +1,15 @@
+{
+  "name": "Mosaic Inner Circle",
+  "short_name": "Inner Circle",
+  "description": "Your House of Mosaic membership card.",
+  "start_url": "club.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0C0A07",
+  "theme_color": "#0C0A07",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "crest.png", "sizes": "208x208", "type": "image/png", "purpose": "any" }
+  ]
+}
