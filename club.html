@@ -33,6 +33,8 @@ input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--
 .btn[disabled]{opacity:.5;cursor:wait}
 .msg{margin-top:14px;font-size:.92rem;text-align:center;color:var(--ivory-soft)}
 .msg.err{color:#E88585}
+.linkish{background:none;border:0;color:var(--gold-bright);font:inherit;font-size:.86rem;cursor:pointer;display:block;margin:14px auto 0;padding:6px}
+.linkish:hover{color:var(--ivory)}
 .tab{display:flex;gap:8px;margin-bottom:6px}
 .tab button{flex:1;background:transparent;border:1px solid var(--hairline-soft);color:var(--ivory-soft);border-radius:999px;padding:9px;font:inherit;font-size:.88rem;cursor:pointer}
 .tab button.on{background:var(--gold);color:#14100A;font-weight:650;border-color:var(--gold)}
@@ -80,7 +82,18 @@ input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--
       <label for="fEmail">Email</label><input id="fEmail" type="email" autocomplete="email" placeholder="you@example.com">
       <label for="fPass">Password</label><input id="fPass" type="password" autocomplete="current-password" placeholder="••••••••">
       <button class="btn" id="goBtn">Sign in</button>
+      <button class="linkish" id="forgotBtn" type="button">Forgot password?</button>
       <p class="msg" id="authMsg"></p>
+    </div>
+  </div>
+
+  <div id="resetView" class="hidden">
+    <h1>A new key</h1>
+    <p class="sub">Choose a new password for your membership.</p>
+    <div class="panel">
+      <label for="fNewPass">New password</label><input id="fNewPass" type="password" autocomplete="new-password">
+      <button class="btn" id="saveNewPass">Save &amp; open my card</button>
+      <p class="msg" id="resetMsg"></p>
     </div>
   </div>
 
@@ -145,6 +158,34 @@ document.getElementById("goBtn").onclick = async function(){
 };
 
 document.getElementById("outBtn").onclick = async function(){ await SB.auth.signOut(); show(false); };
+
+document.getElementById("forgotBtn").onclick = async function(){
+  var msg = document.getElementById("authMsg");
+  var email = document.getElementById("fEmail").value.trim();
+  msg.className = "msg";
+  if(!email){ msg.className="msg err"; msg.textContent="Type your email above first, then tap forgot password."; return; }
+  var r = await SB.auth.resetPasswordForEmail(email, { redirectTo: "https://victorfromaruba-stack.github.io/house-of-mosaic/club.html" });
+  if(r.error){ msg.className="msg err"; msg.textContent = r.error.message; return; }
+  msg.textContent = "A golden key is on its way — check your email.";
+};
+
+SB.auth.onAuthStateChange(function(event){
+  if(event === "PASSWORD_RECOVERY"){
+    document.getElementById("authView").classList.add("hidden");
+    document.getElementById("cardView").classList.add("hidden");
+    document.getElementById("resetView").classList.remove("hidden");
+  }
+});
+
+document.getElementById("saveNewPass").onclick = async function(){
+  var msg = document.getElementById("resetMsg"); msg.className="msg";
+  var p = document.getElementById("fNewPass").value;
+  if(p.length < 8){ msg.className="msg err"; msg.textContent="At least 8 characters, please."; return; }
+  var r = await SB.auth.updateUser({ password: p });
+  if(r.error){ msg.className="msg err"; msg.textContent = r.error.message; return; }
+  document.getElementById("resetView").classList.add("hidden");
+  load();
+};
 
 function show(loggedIn){
   document.getElementById("authView").classList.toggle("hidden", loggedIn);
