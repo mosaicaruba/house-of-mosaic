@@ -36,7 +36,12 @@ input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--
 .tab{display:flex;gap:8px;margin-bottom:6px}
 .tab button{flex:1;background:transparent;border:1px solid var(--hairline-soft);color:var(--ivory-soft);border-radius:999px;padding:9px;font:inherit;font-size:.88rem;cursor:pointer}
 .tab button.on{background:var(--gold);color:#14100A;font-weight:650;border-color:var(--gold)}
-.member-card{background:linear-gradient(135deg,#1A1408 0%,#0F0C06 55%,#1C1509 100%);border:1px solid var(--hairline);border-radius:18px;box-shadow:0 24px 60px -24px rgba(0,0,0,.85),inset 0 1px 0 rgba(231,200,126,.14);padding:24px;margin:8px 0 18px}
+.member-card{position:relative;overflow:hidden;background:linear-gradient(135deg,#1A1408 0%,#0F0C06 55%,#1C1509 100%);border:1px solid var(--hairline);border-radius:18px;box-shadow:0 24px 60px -24px rgba(0,0,0,.85),inset 0 1px 0 rgba(231,200,126,.14);padding:24px;margin:8px 0 18px}
+.member-card::before{content:"";position:absolute;inset:-40%;pointer-events:none;background:linear-gradient(115deg,transparent 42%,rgba(231,200,126,.13) 50%,transparent 58%);transform:translateX(-70%);animation:sheen 6s var(--ease) infinite}
+@keyframes sheen{0%,55%{transform:translateX(-70%)}88%,100%{transform:translateX(70%)}}
+.member-card.full{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 24px 70px -20px rgba(201,162,75,.45)}
+.mc-meta{font-size:.76rem;color:var(--ivory-faint);margin:4px 0 12px;letter-spacing:.05em}
+.mc-meta b{color:var(--gold-bright);font-weight:650}
 .mc-top{display:flex;align-items:center;justify-content:space-between}
 .mc-top img{width:40px;height:40px}
 .mc-top span{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);text-align:right}
@@ -45,7 +50,9 @@ input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--
 .mc-code b{color:var(--gold-bright);font-weight:650}
 .stamps{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
 .stamps i{width:36px;aspect-ratio:1;border-radius:50%;border:1px dashed rgba(201,162,75,.5);display:flex;align-items:center;justify-content:center;font-style:normal;color:#14100A;font-size:.95rem}
-.stamps i.on{background:var(--gold);border:1px solid var(--gold-bright)}
+.stamps i.on{background:var(--gold);border:1px solid var(--gold-bright);animation:pop .45s var(--ease) both}
+@keyframes pop{from{transform:scale(.35);opacity:0}to{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.member-card::before{animation:none}.stamps i.on{animation:none}}
 .progress{margin-top:14px;font-size:.9rem;color:var(--ivory-soft)}
 .progress b{color:var(--gold-bright)}
 .hist{list-style:none;font-size:.9rem;color:var(--ivory-soft)}
@@ -85,6 +92,7 @@ input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--
     </div>
     <div class="panel hidden" id="memberPanel">
       <p class="mc-name" id="mName"></p>
+      <div class="stamps" id="dStamps" style="margin:14px 0 6px"></div>
       <div class="stat-row"><span>Stamps on card</span><b id="mAvail"></b></div>
       <div class="stat-row"><span>Collected all-time</span><b id="mTotal"></b></div>
       <button class="btn" id="stampBtn">＋ Award a stamp</button>
@@ -146,6 +154,13 @@ async function lookup(){
 
 function render(){
   var avail = Number(current.stamps) - Number(current.redeemed);
+  var onCard = avail % PER; if(avail >= PER) onCard = PER;
+  var wrap = document.getElementById("dStamps"); wrap.innerHTML = "";
+  for(var i=0;i<PER;i++){
+    var el=document.createElement("i");
+    if(i<onCard){ el.className="on"; el.textContent="✦"; el.style.animationDelay=(i*70)+"ms"; }
+    wrap.appendChild(el);
+  }
   document.getElementById("memberPanel").classList.remove("hidden");
   document.getElementById("mName").textContent = current.name || current.email || "Member";
   document.getElementById("mAvail").textContent = avail;
