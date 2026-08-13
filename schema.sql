@@ -89,3 +89,12 @@ $$;
 -- AFTER Fernando/you sign up in the club page, make that account staff by
 -- running (replace the email):
 --   insert into public.staff select id from auth.users where email = 'YOUR-EMAIL-HERE';
+
+-- Sequential member number by join order, shown on the card as "No 001".
+-- (Already applied to the live project; kept here so a rebuild matches it.)
+create or replace function public.my_member_number() returns int
+language sql stable security definer set search_path = public as
+$$
+  select count(*)::int from public.profiles p
+  where p.created_at <= (select created_at from public.profiles where id = auth.uid())
+$$;
