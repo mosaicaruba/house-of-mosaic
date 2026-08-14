@@ -9,8 +9,8 @@
 
   var T = {
     es: {
-      "House of Mosaic Aruba — Boutique Hotel & Art Gallery in Oranjestad":
-        "House of Mosaic Aruba — Hotel boutique y galería de arte en Oranjestad",
+      "House of Mosaic Aruba — Art Villa & Gallery in Oranjestad":
+        "House of Mosaic Aruba — Art Villa y galería de arte en Oranjestad",
       "Skip to content": "Saltar al contenido",
       "The House": "La Casa",
       "Rooms": "Habitaciones",
@@ -126,8 +126,8 @@
       "events — since 2004": "privados — desde 2004"
     },
     pap: {
-      "House of Mosaic Aruba — Boutique Hotel & Art Gallery in Oranjestad":
-        "House of Mosaic Aruba — Hotel boutique y galeria di arte na Oranjestad",
+      "House of Mosaic Aruba — Art Villa & Gallery in Oranjestad":
+        "House of Mosaic Aruba — Art Villa y galeria di arte na Oranjestad",
       "Skip to content": "Bay directo na contenido",
       "The House": "E Cas",
       "Rooms": "Kamber",
@@ -240,8 +240,8 @@
       "events — since 2004": "privá — for di 2004"
     },
     fr: {
-      "House of Mosaic Aruba — Boutique Hotel & Art Gallery in Oranjestad":
-        "House of Mosaic Aruba — Hôtel boutique et galerie d'art à Oranjestad",
+      "House of Mosaic Aruba — Art Villa & Gallery in Oranjestad":
+        "House of Mosaic Aruba — Art Villa et galerie d'art à Oranjestad",
       "Skip to content": "Aller au contenu",
       "The House": "La Maison",
       "Rooms": "Chambres",
@@ -356,8 +356,8 @@
       "events — since 2004": "privés — depuis 2004"
     },
     nl: {
-      "House of Mosaic Aruba — Boutique Hotel & Art Gallery in Oranjestad":
-        "House of Mosaic Aruba — Boetiekhotel & kunstgalerij in Oranjestad",
+      "House of Mosaic Aruba — Art Villa & Gallery in Oranjestad":
+        "House of Mosaic Aruba — Art Villa & kunstgalerij in Oranjestad",
       "Skip to content": "Naar de inhoud",
       "The House": "Het Huis",
       "Rooms": "Kamers",
