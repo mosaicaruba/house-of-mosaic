@@ -191,7 +191,7 @@ document.getElementById("forgotBtn").onclick = async function(){
   var email = document.getElementById("fEmail").value.trim();
   msg.className = "msg";
   if(!email){ msg.className="msg err"; msg.textContent="Type your email above first, then tap forgot password."; return; }
-  var r = await SB.auth.resetPasswordForEmail(email, { redirectTo: "https://victorfromaruba-stack.github.io/house-of-mosaic/club.html" });
+  var r = await SB.auth.resetPasswordForEmail(email, { redirectTo: "https://houseofmosaicaruba.com/club.html" });
   if(r.error){ msg.className="msg err"; msg.textContent = r.error.message; return; }
   msg.textContent = "A golden key is on its way — check your email.";
 };
