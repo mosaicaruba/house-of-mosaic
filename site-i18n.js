@@ -122,7 +122,7 @@
       "Stay times": "Horarios",
       "The gate is open": "La puerta está abierta",
       "Come stay a night — or plan something worth celebrating.": "Ven a pasar una noche — o planea algo digno de celebrarse.",
-      "Boutique hotel · Art gallery · Weddings & private": "Hotel boutique · Galería de arte · Bodas y eventos",
+      "Art villa · Gallery · Weddings & private": "Villa de arte · Galería · Bodas y eventos",
       "events — since 2004": "privados — desde 2004"
     },
     pap: {
@@ -236,7 +236,7 @@
       "Stay times": "Orario",
       "The gate is open": "E porta ta habrí",
       "Come stay a night — or plan something worth celebrating.": "Bin keda un anochi — of planea algo cu ta vale la pena celebra.",
-      "Boutique hotel · Art gallery · Weddings & private": "Hotel boutique · Galeria di arte · Boda y evento",
+      "Art villa · Gallery · Weddings & private": "Art Villa · Galeria di arte · Boda y evento",
       "events — since 2004": "privá — for di 2004"
     },
     fr: {
@@ -352,7 +352,7 @@
       "Stay times": "Horaires",
       "The gate is open": "La porte est ouverte",
       "Come stay a night — or plan something worth celebrating.": "Venez passer une nuit — ou préparez quelque chose qui mérite d'être célébré.",
-      "Boutique hotel · Art gallery · Weddings & private": "Hôtel boutique · Galerie d'art · Mariages et événements",
+      "Art villa · Gallery · Weddings & private": "Art Villa · Galerie d'art · Mariages et événements",
       "events — since 2004": "privés — depuis 2004"
     },
     nl: {
@@ -468,7 +468,7 @@
       "Stay times": "Tijden",
       "The gate is open": "De poort staat open",
       "Come stay a night — or plan something worth celebrating.": "Kom een nacht logeren — of plan iets dat het vieren waard is.",
-      "Boutique hotel · Art gallery · Weddings & private": "Boetiekhotel · Kunstgalerij · Bruiloften en privé-",
+      "Art villa · Gallery · Weddings & private": "Art Villa · Kunstgalerij · Bruiloften en privé-",
       "events — since 2004": "evenementen — sinds 2004"
     }
   };
