@@ -554,15 +554,48 @@
   }
 
   function buildSwitcher(current) {
-    var bar = document.createElement("div");
-    bar.setAttribute("role", "group");
-    bar.setAttribute("aria-label", "Language");
-    bar.style.cssText =
-      "position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:9999;" +
-      "display:flex;gap:4px;padding:5px;border-radius:999px;" +
-      "background:rgba(12,10,7,.88);border:1px solid rgba(201,162,75,.4);" +
-      "backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);" +
+    var panelId = "hm-lang-panel";
+    var wrap = document.createElement("div");
+    wrap.style.cssText =
+      "position:fixed;right:14px;bottom:14px;z-index:9999;" +
       "font:600 11px/1 Archivo,system-ui,sans-serif;letter-spacing:.08em";
+
+    var toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.setAttribute("aria-haspopup", "true");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", panelId);
+    toggle.setAttribute("aria-label", "Change language");
+    toggle.style.cssText =
+      "display:flex;align-items:center;gap:5px;border:0;cursor:pointer;" +
+      "padding:10px 14px;border-radius:999px;letter-spacing:inherit;font:inherit;" +
+      "background:rgba(12,10,7,.88);border:1px solid rgba(201,162,75,.4);" +
+      "backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#D9CFB4";
+    var current_ = document.createElement("span");
+    current_.textContent = (LANGS.filter(function (l) { return l.id === current; })[0] || LANGS[0]).label;
+    var caret = document.createElement("span");
+    caret.textContent = "▾";
+    caret.setAttribute("aria-hidden", "true");
+    toggle.appendChild(current_);
+    toggle.appendChild(caret);
+
+    var panel = document.createElement("div");
+    panel.id = panelId;
+    panel.setAttribute("role", "group");
+    panel.setAttribute("aria-label", "Language");
+    panel.style.cssText =
+      "position:absolute;right:0;bottom:calc(100% + 8px);display:none;gap:4px;" +
+      "padding:5px;border-radius:999px;white-space:nowrap;" +
+      "background:rgba(12,10,7,.92);border:1px solid rgba(201,162,75,.4);" +
+      "backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)";
+
+    var open = false;
+    function setOpen(v) {
+      open = v;
+      panel.style.display = open ? "flex" : "none";
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
     LANGS.forEach(function (lang) {
       var button = document.createElement("button");
       button.type = "button";
@@ -570,7 +603,7 @@
       button.setAttribute("aria-label", lang.name);
       var active = lang.id === current;
       button.style.cssText =
-        "border:0;cursor:pointer;padding:8px 11px;border-radius:999px;letter-spacing:inherit;" +
+        "border:0;cursor:pointer;padding:8px 11px;border-radius:999px;letter-spacing:inherit;font:inherit;" +
         (active
           ? "background:linear-gradient(150deg,#E7C87E,#A67F2F);color:#0C0A07;"
           : "background:transparent;color:#D9CFB4;");
@@ -582,9 +615,26 @@
         url.searchParams.delete("lang");
         location.href = url.toString();
       });
-      bar.appendChild(button);
+      panel.appendChild(button);
     });
-    document.body.appendChild(bar);
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setOpen(!open);
+    });
+    document.addEventListener("click", function (e) {
+      if (open && !wrap.contains(e.target)) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (open && e.key === "Escape") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    wrap.appendChild(panel);
+    wrap.appendChild(toggle);
+    document.body.appendChild(wrap);
   }
 
   function init() {
