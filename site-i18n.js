@@ -9,6 +9,9 @@
 
   var T = {
     es: {
+      "Contact": "Contacto",
+      "Follow": "Síguenos",
+      "© 2026 House of Mosaic · Vacation home rental · Event venue · Art gallery": "© 2026 House of Mosaic · Alquiler vacacional · Sede de eventos · Galería de arte",
       "House of Mosaic · Art Villa & Gallery · Oranjestad, Aruba":
         "House of Mosaic · Art Villa y galería de arte · Oranjestad, Aruba",
       "Skip to content": "Saltar al contenido",
@@ -124,6 +127,9 @@
       "events · since 2004": "privados · desde 2004"
     },
     pap: {
+      "Contact": "Kontakto",
+      "Follow": "Sigui nos",
+      "© 2026 House of Mosaic · Vacation home rental · Event venue · Art gallery": "© 2026 House of Mosaic · Hür di cas di vakashon · Lugá di evento · Galeria di arte",
       "House of Mosaic · Art Villa & Gallery · Oranjestad, Aruba":
         "House of Mosaic · Art Villa y galeria di arte · Oranjestad, Aruba",
       "Skip to content": "Bay directo na contenido",
@@ -237,6 +243,9 @@
       "events · since 2004": "privá · for di 2004"
     },
     fr: {
+      "Contact": "Contact",
+      "Follow": "Suivez-nous",
+      "© 2026 House of Mosaic · Vacation home rental · Event venue · Art gallery": "© 2026 House of Mosaic · Location de vacances · Lieu d'événements · Galerie d'art",
       "House of Mosaic · Art Villa & Gallery · Oranjestad, Aruba":
         "House of Mosaic · Art Villa et galerie d'art · Oranjestad, Aruba",
       "Skip to content": "Aller au contenu",
@@ -352,6 +361,9 @@
       "events · since 2004": "privés · depuis 2004"
     },
     nl: {
+      "Contact": "Contact",
+      "Follow": "Volg ons",
+      "© 2026 House of Mosaic · Vacation home rental · Event venue · Art gallery": "© 2026 House of Mosaic · Vakantieverhuur · Evenementenlocatie · Kunstgalerie",
       "House of Mosaic · Art Villa & Gallery · Oranjestad, Aruba":
         "House of Mosaic · Art Villa & kunstgalerij · Oranjestad, Aruba",
       "Skip to content": "Naar de inhoud",
@@ -552,7 +564,7 @@
     var wrap = document.createElement("div");
     wrap.style.cssText =
       "position:fixed;right:14px;bottom:14px;z-index:9999;" +
-      "font:600 11px/1 Archivo,system-ui,sans-serif;letter-spacing:.08em";
+      "font:600 11px/1 Lora,Georgia,serif;letter-spacing:.08em";
 
     var toggle = document.createElement("button");
     toggle.type = "button";
