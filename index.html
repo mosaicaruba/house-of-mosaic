@@ -274,6 +274,24 @@ footer .fleur{color:var(--gold-deep);margin-bottom:14px;display:block;font-size:
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
 }
+
+/* ---------- ritual ---------- */
+.ritual-panel{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(30px,5vw,68px);align-items:center;margin-top:clamp(38px,6vw,60px);position:relative;z-index:1}
+.ritual-object{border:1px solid var(--hairline);border-radius:999px 999px 14px 14px;
+  padding:clamp(40px,5vw,62px) 24px;text-align:center;
+  background:linear-gradient(180deg,rgba(201,162,75,.06),rgba(255,254,242,0))}
+.ritual-year{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.4rem,6.4vw,5.2rem);
+  line-height:1;font-weight:500;letter-spacing:.02em;
+  color:transparent;-webkit-text-stroke:1px var(--gold)}
+.ritual-cap{margin-top:16px;font-size:.68rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.ritual-txt p{color:var(--ivory-soft)}
+.ritual-txt p+p{margin-top:22px}
+.ritual-txt strong{color:var(--ivory);font-weight:640}
+.ritual-note{margin-top:clamp(30px,4vw,44px);max-width:56ch;color:var(--ivory-faint);font-size:.9rem;position:relative;z-index:1}
+@media(max-width:860px){
+  .ritual-panel{grid-template-columns:1fr;gap:24px}
+  .ritual-object{padding:34px 20px;max-width:300px;margin:0 auto}
+}
 </style>
 
 <style id="brand-pass">
@@ -461,10 +479,32 @@ footer .fleur{display:block;text-align:center;padding-top:26px}
   </div>
 </section>
 
+<section id="ritual">
+  <span class="ghost-word" aria-hidden="true">Restore</span>
+  <div class="wrap">
+    <p class="chapter rv">Chapter III · The Ritual</p>
+    <h2 class="rv">An 1890 opium bed, and the hour it holds</h2>
+    <p class="lede rv">Spa in a Bed is the slowest hour on the property: aromatherapy, tea, champagne, frozen botanicals, and light, taken inside a carved Chinese bed that has anchored the house since 2008.</p>
+    <div class="ritual-panel">
+      <div class="ritual-object rv">
+        <p class="ritual-year">1890</p>
+        <p class="ritual-cap">Carved in China</p>
+      </div>
+      <div class="ritual-txt rv">
+        <p><strong>The object</strong>: A room within a room, and a rare survivor of an era that left very few. Fernando found it in a Dutch antique shop in Curaçao in 2008 and brought it across the water to Aruba.</p>
+        <p><strong>The ritual</strong>: Aromatherapy, tea and champagne, frozen botanicals, and light that moves slower than you do. An hour built around doing very little, and doing it beautifully.</p>
+        <p><strong>For one, or for two</strong>: Individual and couples rituals, by reservation. Choose your hour, and a digital invitation follows.</p>
+      </div>
+    </div>
+    <p class="ritual-note rv">Rituals are arranged ahead of your visit. Write to the house for the current list and pricing.</p>
+    <p class="rv" style="margin-top:22px"><a class="btn" href="mailto:houseofmosaicaruba@gmail.com?subject=Spa%20in%20a%20Bed">Ask about the ritual</a></p>
+  </div>
+</section>
+
 <section id="events">
   <span class="ghost-word" aria-hidden="true">Celebrate</span>
   <div class="wrap">
-    <p class="chapter rv">Chapter III · The Garden</p>
+    <p class="chapter rv">Chapter IV · The Garden</p>
     <h2 class="rv">Say it with a garden party</h2>
     <p class="lede rv">The <span style="white-space:nowrap">House of Mosaic</span> team has designed weddings and celebrations
     since 1994. <strong style="color:var(--ivory)">All love is celebrated
@@ -506,7 +546,7 @@ footer .fleur{display:block;text-align:center;padding-top:26px}
 <section id="club" style="padding-top:0">
   <span class="ghost-word" aria-hidden="true">Circle</span>
   <div class="wrap">
-    <p class="chapter rv">Chapter IV · The Inner Circle</p>
+    <p class="chapter rv">Chapter V · The Inner Circle</p>
     <h2 class="rv">Some guests never really check out</h2>
     <div class="club-grid">
       <div class="txt rv">
@@ -528,7 +568,7 @@ footer .fleur{display:block;text-align:center;padding-top:26px}
 
 <section id="visit" style="padding-top:0">
   <div class="wrap">
-    <p class="chapter rv">Chapter V · The Visit</p>
+    <p class="chapter rv">Chapter VI · The Visit</p>
     <h2 class="rv">Find the house in Oranjestad</h2>
     <div class="ticket rv">
       <div class="ticket-info">
