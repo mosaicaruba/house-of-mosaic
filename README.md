@@ -1,6 +1,6 @@
 # House of Mosaic Aruba
 
-One-page website for House of Mosaic Aruba — art villa, gallery & event garden in Oranjestad.
+One-page website for House of Mosaic: art villa, gallery & event garden in Oranjestad.
 
 Fully self-contained `index.html` (fonts and photos embedded). Deployed automatically to GitHub Pages on every push to `main`.
 
