@@ -937,10 +937,13 @@
     return text.replace(/ /g, " ").replace(/\s+/g, " ").trim();
   }
 
-  function translate(lang) {
-    var dict = T[lang];
-    if (!dict) return;
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+  // Snapshot the English source once so a language can be applied repeatedly
+  // without reloading the page.
+  var SOURCE = null;
+  var SOURCE_TITLE = "";
+
+  function textNodes() {
+    return document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
       acceptNode: function (node) {
         var parent = node.parentNode && node.parentNode.nodeName;
         if (parent === "SCRIPT" || parent === "STYLE" || parent === "NOSCRIPT") {
@@ -949,17 +952,38 @@
         return NodeFilter.FILTER_ACCEPT;
       }
     });
+  }
+
+  function snapshot() {
+    SOURCE = [];
+    SOURCE_TITLE = document.title;
+    var walker = textNodes();
     var node;
     while ((node = walker.nextNode())) {
-      var key = normalize(node.nodeValue || "");
-      if (key !== "" && dict.hasOwnProperty(key)) {
-        var lead = /^\s*/.exec(node.nodeValue)[0];
-        var tail = /\s*$/.exec(node.nodeValue)[0];
-        node.nodeValue = lead + dict[key] + tail;
+      if (normalize(node.nodeValue || "") !== "") {
+        SOURCE.push({ node: node, text: node.nodeValue });
       }
     }
-    var titleKey = normalize(document.title);
-    if (dict.hasOwnProperty(titleKey)) document.title = dict[titleKey];
+  }
+
+  // Always re-applied from the English snapshot, so switching straight from
+  // one translation to another works. "en" simply restores the snapshot.
+  function translate(lang) {
+    if (!SOURCE) snapshot();
+    var dict = T[lang];
+    for (var i = 0; i < SOURCE.length; i++) {
+      var entry = SOURCE[i];
+      var value = entry.text;
+      if (dict) {
+        var key = normalize(value);
+        if (dict.hasOwnProperty(key)) {
+          value = /^\s*/.exec(entry.text)[0] + dict[key] + /\s*$/.exec(entry.text)[0];
+        }
+      }
+      if (entry.node.nodeValue !== value) entry.node.nodeValue = value;
+    }
+    var titleKey = normalize(SOURCE_TITLE);
+    document.title = dict && dict.hasOwnProperty(titleKey) ? dict[titleKey] : SOURCE_TITLE;
     document.documentElement.setAttribute("lang", lang);
   }
 
@@ -977,8 +1001,9 @@
     toggle.setAttribute("aria-controls", panelId);
     toggle.setAttribute("aria-label", "Change language");
     toggle.style.cssText =
-      "display:flex;align-items:center;gap:5px;border:0;cursor:pointer;" +
-      "padding:10px 14px;border-radius:999px;letter-spacing:inherit;font:inherit;" +
+      "display:flex;align-items:center;justify-content:center;gap:5px;border:0;cursor:pointer;" +
+      "padding:10px 16px;min-height:44px;border-radius:999px;letter-spacing:inherit;font:inherit;" +
+      "touch-action:manipulation;" +
       "background:rgba(12,10,7,.88);border:1px solid rgba(201,162,75,.4);" +
       "backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#D9CFB4";
     var current_ = document.createElement("span");
@@ -994,8 +1019,9 @@
     panel.setAttribute("role", "group");
     panel.setAttribute("aria-label", "Language");
     panel.style.cssText =
-      "position:absolute;right:0;bottom:calc(100% + 8px);display:none;gap:4px;" +
-      "padding:5px;border-radius:999px;white-space:nowrap;" +
+      "position:absolute;right:0;bottom:calc(100% + 8px);display:none;gap:3px;" +
+      "flex-wrap:wrap;justify-content:center;width:max-content;max-width:calc(100vw - 28px);" +
+      "padding:4px;border-radius:26px;white-space:nowrap;" +
       "background:rgba(12,10,7,.92);border:1px solid rgba(201,162,75,.4);" +
       "backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)";
 
@@ -1006,6 +1032,17 @@
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     }
 
+    var buttons = [];
+    function setCurrent(id) {
+      var match = LANGS.filter(function (l) { return l.id === id; })[0] || LANGS[0];
+      current_.textContent = match.label;
+      buttons.forEach(function (b) {
+        var on = b.id === id;
+        b.el.style.background = on ? "linear-gradient(150deg,#E7C87E,#A67F2F)" : "transparent";
+        b.el.style.color = on ? "#0C0A07" : "#D9CFB4";
+      });
+    }
+
     LANGS.forEach(function (lang) {
       var button = document.createElement("button");
       button.type = "button";
@@ -1014,6 +1051,8 @@
       var active = lang.id === current;
       button.style.cssText =
         "border:0;cursor:pointer;padding:8px 11px;border-radius:999px;letter-spacing:inherit;font:inherit;" +
+        "min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;" +
+        "touch-action:manipulation;" +
         (active
           ? "background:linear-gradient(150deg,#E7C87E,#A67F2F);color:#0C0A07;"
           : "background:transparent;color:#D9CFB4;");
@@ -1021,10 +1060,20 @@
         try {
           localStorage.setItem("hm.lang", lang.id);
         } catch (e) {}
-        var url = new URL(location.href);
-        url.searchParams.delete("lang");
-        location.href = url.toString();
+        // A ?lang= in the address bar outranks the stored choice on the next
+        // visit, so clear it rather than let it contradict this click.
+        try {
+          var url = new URL(location.href);
+          if (url.searchParams.has("lang")) {
+            url.searchParams.delete("lang");
+            history.replaceState(null, "", url.toString());
+          }
+        } catch (e) {}
+        translate(lang.id);
+        setCurrent(lang.id);
+        setOpen(false);
       });
+      buttons.push({ id: lang.id, el: button });
       panel.appendChild(button);
     });
 
@@ -1049,6 +1098,7 @@
 
   function init() {
     var lang = detect();
+    snapshot();
     if (lang !== "en") translate(lang);
     buildSwitcher(lang);
   }
