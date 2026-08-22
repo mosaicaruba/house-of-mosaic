@@ -45,7 +45,8 @@ a{color:var(--gold-bright)}
     [/travel|agent|advisor|trade/,       "/trade.html"],
     [/inner|circle|club|member/,         "/club.html"],
     [/contact|visit|find|reservation|faq/,"/#visit"],
-    [/about|world|mosaic|story|news/,    "/#story"]
+    [/about|profile|owner|fernando/,     "/about.html"],
+    [/world|mosaic|story|news/,          "/#story"]
   ];
   for (var i=0;i<rules.length;i++){
     if (rules[i][0].test(p)) { location.replace(rules[i][1]); return; }
