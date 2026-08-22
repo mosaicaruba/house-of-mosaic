@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page moved · House of Mosaic</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--night:#0C0A07;--ivory:#FFFEF2;--ivory-soft:rgba(255,254,242,.74);--gold:#C9A24B;--gold-bright:#E7C87E;--hairline:rgba(201,162,75,.28)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--night);color:var(--ivory);font-family:'Lora',Georgia,serif;line-height:1.7;
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 22px;text-align:center}
+.box{max-width:52ch}
+img{width:64px;height:64px;margin:0 auto 26px;display:block}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:520;line-height:1.1;
+  font-size:clamp(1.7rem,4.4vw,2.5rem);letter-spacing:-.012em;color:var(--ivory)}
+p{margin-top:18px;color:var(--ivory-soft)}
+a{color:var(--gold-bright)}
+.links{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.links a{display:inline-block;padding:11px 18px;border:1px solid var(--hairline);border-radius:999px;
+  text-decoration:none;color:var(--ivory);font-size:.9rem}
+.links a:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="box">
+  <img src="crest.png" alt="" width="64" height="64">
+  <h1>That page has moved</h1>
+  <p id="msg">House of Mosaic is now a single page. Everything that used to live on its own page is a section of it.</p>
+  <div class="links">
+    <a href="/#story">The house</a><a href="/#rooms">Rooms</a><a href="/#ritual">Spa in a Bed</a>
+    <a href="/#events">Events</a><a href="/#bar">Bar Bizarro</a><a href="/#residency">Write on Aruba</a>
+    <a href="/trade.html">Travel advisors</a><a href="/#visit">Visit</a>
+  </div>
+</div>
+<script>
+(function(){
+  var p = location.pathname.toLowerCase();
+  var rules = [
+    [/spa|opium|ritual|wellness/,        "/#ritual"],
+    [/bar|cocktail|food|menu|drink/,     "/#bar"],
+    [/writer|residenc|write/,            "/#residency"],
+    [/lgbt|wedding|event|celebrat|garden/,"/#events"],
+    [/room|suite|stay|gallery-room/,     "/#rooms"],
+    [/travel|agent|advisor|trade/,       "/trade.html"],
+    [/inner|circle|club|member/,         "/club.html"],
+    [/contact|visit|find|reservation|faq/,"/#visit"],
+    [/about|world|mosaic|story|news/,    "/#story"]
+  ];
+  for (var i=0;i<rules.length;i++){
+    if (rules[i][0].test(p)) { location.replace(rules[i][1]); return; }
+  }
+})();
+</script>
+</body>
+</html>
