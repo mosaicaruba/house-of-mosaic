@@ -9,6 +9,73 @@
 
   var T = {
     es: {
+      // about.html, club.html, 404.html (8 Nov 2026)
+      "Fernando Mansur · House of Mosaic · Art Villa & Gallery, Aruba":
+        "Fernando Mansur · House of Mosaic · Villa de Arte y Galería, Aruba",
+      "Art Villa & Gallery":
+        "Villa de Arte y Galería",
+      "The owner":
+        "El dueño",
+      "House of Mosaic is one man's house before it is anything else. Fernando grew up in it, opened it to guests on the first of August 2004, and has not stopped decorating since.":
+        "House of Mosaic es, antes que nada, la casa de un hombre. Fernando creció en ella, la abrió a los huéspedes el primero de agosto de 2004 y no ha dejado de decorarla desde entonces.",
+      "He is the artist as well as the host. The mosaics climbing the walls and walkways, the carved wood and velvet and gold that catch the candlelight, the gallery that keeps filling with new work: it is his hand throughout, and he is usually somewhere on the property, adding to it.":
+        "Es el artista además del anfitrión. Los mosaicos que trepan por paredes y pasillos, la madera tallada, el terciopelo y el oro que atrapan la luz de las velas, la galería que no deja de llenarse de obra nueva: todo es obra de su mano, y casi siempre está en algún rincón de la propiedad, añadiendo algo más.",
+      "He painted the main entrance doors himself. The crest on them came off those doors to become the mark of the house, and it is the same mark at the top of this page.":
+        "Él mismo pintó las puertas de la entrada principal. El escudo que lleva salió de esas puertas para convertirse en el emblema de la casa, y es el mismo que ves en lo alto de esta página.",
+      "In 2008 he found an 1890 Chinese opium bed in a Dutch antique shop in Curaçao and brought it across the water. It has anchored the house ever since, and the Spa in a Bed ritual takes place inside it.":
+        "En 2008 encontró una cama china de opio de 1890 en una tienda de antigüedades holandesa en Curazao y la trajo cruzando el mar. Desde entonces es el corazón de la casa, y el ritual Spa in a Bed se celebra dentro de ella.",
+      "What guests say about him":
+        "Lo que dicen de él los huéspedes",
+      "The house has designed weddings and celebrations since 1994, and has welcomed guests since 2004. Fernando answers the enquiries himself.":
+        "La casa diseña bodas y celebraciones desde 1994 y recibe huéspedes desde 2004. Fernando responde las consultas personalmente.",
+      "The Inner Circle":
+        "El Inner Circle",
+      "Collect privileges. Unlock member-only experiences.":
+        "Acumula privilegios. Desbloquea experiencias exclusivas para miembros.",
+      "Sign in":
+        "Iniciar sesión",
+      "Join the circle":
+        "Únete al círculo",
+      "Your name":
+        "Tu nombre",
+      "Password":
+        "Contraseña",
+      "Forgot password?":
+        "¿Olvidaste tu contraseña?",
+      "A new key":
+        "Una llave nueva",
+      "Choose a new password for your membership.":
+        "Elige una contraseña nueva para tu membresía.",
+      "New password":
+        "Contraseña nueva",
+      "Save & open my card":
+        "Guardar y abrir mi tarjeta",
+      "Welcome back":
+        "Bienvenido de nuevo",
+      "Show this card at the house to collect a stamp.":
+        "Muestra esta tarjeta en la casa para recibir un sello.",
+      "Member":
+        "Miembro",
+      "MEMBER CODE":
+        "CÓDIGO DE MIEMBRO",
+      "Keep your card one tap away:":
+        "Ten tu tarjeta a un toque:",
+      "open the browser menu, then “Add to Home screen”":
+        "abre el menú del navegador y luego “Añadir a pantalla de inicio”",
+      "History":
+        "Historial",
+      "Sign out":
+        "Cerrar sesión",
+      "← Back to House of Mosaic":
+        "← Volver a House of Mosaic",
+      "Page moved · House of Mosaic":
+        "Página trasladada · House of Mosaic",
+      "That page has moved":
+        "Esa página se ha trasladado",
+      "House of Mosaic is now a single page. Everything that used to live on its own page is a section of it.":
+        "House of Mosaic ahora es una sola página. Todo lo que antes tenía su propia página ahora es una sección de ella.",
+      "The house":
+        "La casa",
       "A Caribbean sanctuary for creatives": "Un santuario caribeño para creativos",
       "A retreat for creators to advance their work. Whether you are working on your next novel, screenplay, or collection of poetry, let the warmth of Aruba fuel your inspiration.": "Un retiro para creadores que quieren avanzar su obra. Ya sea que trabajes en tu próxima novela, guion o colección de poesía, deja que la calidez de Aruba alimente tu inspiración.",
       "In partnership with the": "En alianza con la",
@@ -186,6 +253,73 @@
       "events · since 2004": "privados · desde 2004"
     },
     pap: {
+      // about.html, club.html, 404.html (8 Nov 2026)
+      "Fernando Mansur · House of Mosaic · Art Villa & Gallery, Aruba":
+        "Fernando Mansur · House of Mosaic · Villa di Arte i Galeria, Aruba",
+      "Art Villa & Gallery":
+        "Villa di Arte i Galeria",
+      "The owner":
+        "E doño",
+      "House of Mosaic is one man's house before it is anything else. Fernando grew up in it, opened it to guests on the first of August 2004, and has not stopped decorating since.":
+        "House of Mosaic ta promé cu tur cos e cas di un hende. Fernando a lanta den dje, a habri e pa huéspednan riba prome di augustus 2004, i desde e tempo ei e no a stop di decor'é.",
+      "He is the artist as well as the host. The mosaics climbing the walls and walkways, the carved wood and velvet and gold that catch the candlelight, the gallery that keeps filling with new work: it is his hand throughout, and he is usually somewhere on the property, adding to it.":
+        "E ta e artista i tambe e anfitrion. E mosaiconan cu ta subi riba e muraya i caminda, e palo tayá, e terciopelo i oro cu ta gara e lus di bela, e galeria cu ta sigui yena cu trabou nobo: tur ta obra di su man, i normalmente e ta un caminda riba e propiedad, ta agregá algo mas.",
+      "He painted the main entrance doors himself. The crest on them came off those doors to become the mark of the house, and it is the same mark at the top of this page.":
+        "E mes a pinta e portanan di entrada principal. E escudo riba nan a sali for di e portanan ei pa bira e marca di e cas, i ta e mesun marca cu bo ta mira na cabez di e pagina aki.",
+      "In 2008 he found an 1890 Chinese opium bed in a Dutch antique shop in Curaçao and brought it across the water. It has anchored the house ever since, and the Spa in a Bed ritual takes place inside it.":
+        "Na 2008 el a haña un cama chines di opio di 1890 den un tienda di antigüedad hulandes na Kòrsou i a trece’le over di laman. Desde e tempo ei e ta e ancla di e cas, i e ritual Spa in a Bed ta tuma lugá aden.",
+      "What guests say about him":
+        "Loke huéspednan ta bisa di dje",
+      "The house has designed weddings and celebrations since 1994, and has welcomed guests since 2004. Fernando answers the enquiries himself.":
+        "E cas ta diseñá casamento i celebracion desde 1994, i ta ricibí huéspednan desde 2004. Fernando mes ta contestá e preguntanan.",
+      "The Inner Circle":
+        "E Inner Circle",
+      "Collect privileges. Unlock member-only experiences.":
+        "Colectá privilegio. Habri experiencianan exclusivo pa miembro.",
+      "Sign in":
+        "Drenta",
+      "Join the circle":
+        "Uni cu e círculo",
+      "Your name":
+        "Bo nomber",
+      "Password":
+        "Contraseña",
+      "Forgot password?":
+        "Bo a lubida bo contraseña?",
+      "A new key":
+        "Un yabi nobo",
+      "Choose a new password for your membership.":
+        "Scoge un contraseña nobo pa bo membresia.",
+      "New password":
+        "Contraseña nobo",
+      "Save & open my card":
+        "Warda i habri mi carchi",
+      "Welcome back":
+        "Bon bini atrobe",
+      "Show this card at the house to collect a stamp.":
+        "Mustra e carchi aki na e cas pa colectá un stempel.",
+      "Member":
+        "Miembro",
+      "MEMBER CODE":
+        "CODIGO DI MIEMBRO",
+      "Keep your card one tap away:":
+        "Tene bo carchi na un toque:",
+      "open the browser menu, then “Add to Home screen”":
+        "habri e menu di e navegador, despues “Agregá na pantalla di inicio”",
+      "History":
+        "Historial",
+      "Sign out":
+        "Sali",
+      "← Back to House of Mosaic":
+        "← Bolbe na House of Mosaic",
+      "Page moved · House of Mosaic":
+        "Pagina a muda · House of Mosaic",
+      "That page has moved":
+        "E pagina ei a muda",
+      "House of Mosaic is now a single page. Everything that used to live on its own page is a section of it.":
+        "House of Mosaic awor ta un solo pagina. Tur loke tabata riba su mes pagina awor ta un seccion di dje.",
+      "The house":
+        "E cas",
       "A Caribbean sanctuary for creatives": "Un santuario karibense pa kreativonan",
       "A retreat for creators to advance their work. Whether you are working on your next novel, screenplay, or collection of poetry, let the warmth of Aruba fuel your inspiration.": "Un retiro pa kreadornan avansá nan obra. Sea bo ta traha riba bo siguiente novela, guion òf kolekshon di poesia, laga e calor di Aruba alimentá bo inspirashon.",
       "In partnership with the": "Den kolaborashon ku",
@@ -361,6 +495,73 @@
       "events · since 2004": "privá · for di 2004"
     },
     fr: {
+      // about.html, club.html, 404.html (8 Nov 2026)
+      "Fernando Mansur · House of Mosaic · Art Villa & Gallery, Aruba":
+        "Fernando Mansur · House of Mosaic · Villa d'art et galerie, Aruba",
+      "Art Villa & Gallery":
+        "Villa d'art et galerie",
+      "The owner":
+        "Le propriétaire",
+      "House of Mosaic is one man's house before it is anything else. Fernando grew up in it, opened it to guests on the first of August 2004, and has not stopped decorating since.":
+        "House of Mosaic est, avant toute chose, la maison d'un homme. Fernando y a grandi, l'a ouverte aux hôtes le 1er août 2004, et n'a jamais cessé de la décorer depuis.",
+      "He is the artist as well as the host. The mosaics climbing the walls and walkways, the carved wood and velvet and gold that catch the candlelight, the gallery that keeps filling with new work: it is his hand throughout, and he is usually somewhere on the property, adding to it.":
+        "Il est l'artiste autant que l'hôte. Les mosaïques qui grimpent sur les murs et les allées, le bois sculpté, le velours et l'or qui accrochent la lumière des bougies, la galerie qui ne cesse de se remplir d'œuvres nouvelles : tout est de sa main, et il est généralement quelque part sur la propriété, en train d'y ajouter quelque chose.",
+      "He painted the main entrance doors himself. The crest on them came off those doors to become the mark of the house, and it is the same mark at the top of this page.":
+        "Il a peint lui-même les portes de l'entrée principale. Le blason qui les orne est devenu l'emblème de la maison, et c'est le même qui figure en haut de cette page.",
+      "In 2008 he found an 1890 Chinese opium bed in a Dutch antique shop in Curaçao and brought it across the water. It has anchored the house ever since, and the Spa in a Bed ritual takes place inside it.":
+        "En 2008, il a trouvé un lit d'opium chinois de 1890 chez un antiquaire néerlandais à Curaçao et lui a fait traverser la mer. Il est depuis le cœur de la maison, et le rituel Spa in a Bed se déroule à l'intérieur.",
+      "What guests say about him":
+        "Ce que les hôtes disent de lui",
+      "The house has designed weddings and celebrations since 1994, and has welcomed guests since 2004. Fernando answers the enquiries himself.":
+        "La maison conçoit des mariages et des célébrations depuis 1994 et accueille des hôtes depuis 2004. Fernando répond lui-même aux demandes.",
+      "The Inner Circle":
+        "L'Inner Circle",
+      "Collect privileges. Unlock member-only experiences.":
+        "Cumulez des privilèges. Débloquez des expériences réservées aux membres.",
+      "Sign in":
+        "Se connecter",
+      "Join the circle":
+        "Rejoindre le cercle",
+      "Your name":
+        "Votre nom",
+      "Password":
+        "Mot de passe",
+      "Forgot password?":
+        "Mot de passe oublié ?",
+      "A new key":
+        "Une nouvelle clé",
+      "Choose a new password for your membership.":
+        "Choisissez un nouveau mot de passe pour votre adhésion.",
+      "New password":
+        "Nouveau mot de passe",
+      "Save & open my card":
+        "Enregistrer et ouvrir ma carte",
+      "Welcome back":
+        "Bon retour",
+      "Show this card at the house to collect a stamp.":
+        "Présentez cette carte à la maison pour obtenir un tampon.",
+      "Member":
+        "Membre",
+      "MEMBER CODE":
+        "CODE MEMBRE",
+      "Keep your card one tap away:":
+        "Gardez votre carte à portée de main :",
+      "open the browser menu, then “Add to Home screen”":
+        "ouvrez le menu du navigateur, puis « Sur l'écran d'accueil »",
+      "History":
+        "Historique",
+      "Sign out":
+        "Se déconnecter",
+      "← Back to House of Mosaic":
+        "← Retour à House of Mosaic",
+      "Page moved · House of Mosaic":
+        "Page déplacée · House of Mosaic",
+      "That page has moved":
+        "Cette page a été déplacée",
+      "House of Mosaic is now a single page. Everything that used to live on its own page is a section of it.":
+        "House of Mosaic tient désormais sur une seule page. Tout ce qui avait sa propre page en est maintenant une section.",
+      "The house":
+        "La maison",
       "A Caribbean sanctuary for creatives": "Un sanctuaire caribéen pour les créatifs",
       "A retreat for creators to advance their work. Whether you are working on your next novel, screenplay, or collection of poetry, let the warmth of Aruba fuel your inspiration.": "Une retraite pour les créateurs qui veulent faire avancer leur œuvre. Que vous travailliez à votre prochain roman, scénario ou recueil de poésie, laissez la chaleur d'Aruba nourrir votre inspiration.",
       "In partnership with the": "En partenariat avec la",
@@ -538,6 +739,73 @@
       "events · since 2004": "privés · depuis 2004"
     },
     nl: {
+      // about.html, club.html, 404.html (8 Nov 2026)
+      "Fernando Mansur · House of Mosaic · Art Villa & Gallery, Aruba":
+        "Fernando Mansur · House of Mosaic · Kunstvilla & galerie, Aruba",
+      "Art Villa & Gallery":
+        "Kunstvilla & galerie",
+      "The owner":
+        "De eigenaar",
+      "House of Mosaic is one man's house before it is anything else. Fernando grew up in it, opened it to guests on the first of August 2004, and has not stopped decorating since.":
+        "House of Mosaic is vóór alles het huis van één man. Fernando groeide er op, opende het op 1 augustus 2004 voor gasten en is sindsdien niet gestopt met versieren.",
+      "He is the artist as well as the host. The mosaics climbing the walls and walkways, the carved wood and velvet and gold that catch the candlelight, the gallery that keeps filling with new work: it is his hand throughout, and he is usually somewhere on the property, adding to it.":
+        "Hij is zowel de kunstenaar als de gastheer. De mozaïeken die langs de muren en paden klimmen, het gesneden hout, het fluweel en het goud dat het kaarslicht vangt, de galerie die zich blijft vullen met nieuw werk: overal is het zijn hand, en meestal is hij ergens op het terrein bezig er iets aan toe te voegen.",
+      "He painted the main entrance doors himself. The crest on them came off those doors to become the mark of the house, and it is the same mark at the top of this page.":
+        "Hij schilderde de voordeuren zelf. Het wapen erop werd het merkteken van het huis, en het is hetzelfde teken als bovenaan deze pagina.",
+      "In 2008 he found an 1890 Chinese opium bed in a Dutch antique shop in Curaçao and brought it across the water. It has anchored the house ever since, and the Spa in a Bed ritual takes place inside it.":
+        "In 2008 vond hij een Chinees opiumbed uit 1890 bij een Nederlandse antiekwinkel op Curaçao en haalde het over het water. Sindsdien is het het anker van het huis, en het Spa in a Bed-ritueel vindt erin plaats.",
+      "What guests say about him":
+        "Wat gasten over hem zeggen",
+      "The house has designed weddings and celebrations since 1994, and has welcomed guests since 2004. Fernando answers the enquiries himself.":
+        "Het huis ontwerpt sinds 1994 bruiloften en feesten en ontvangt sinds 2004 gasten. Fernando beantwoordt de aanvragen zelf.",
+      "The Inner Circle":
+        "De Inner Circle",
+      "Collect privileges. Unlock member-only experiences.":
+        "Spaar privileges. Ontgrendel ervaringen alleen voor leden.",
+      "Sign in":
+        "Inloggen",
+      "Join the circle":
+        "Word lid van de kring",
+      "Your name":
+        "Je naam",
+      "Password":
+        "Wachtwoord",
+      "Forgot password?":
+        "Wachtwoord vergeten?",
+      "A new key":
+        "Een nieuwe sleutel",
+      "Choose a new password for your membership.":
+        "Kies een nieuw wachtwoord voor je lidmaatschap.",
+      "New password":
+        "Nieuw wachtwoord",
+      "Save & open my card":
+        "Opslaan en mijn kaart openen",
+      "Welcome back":
+        "Welkom terug",
+      "Show this card at the house to collect a stamp.":
+        "Laat deze kaart in het huis zien om een stempel te krijgen.",
+      "Member":
+        "Lid",
+      "MEMBER CODE":
+        "LEDENCODE",
+      "Keep your card one tap away:":
+        "Houd je kaart één tik verwijderd:",
+      "open the browser menu, then “Add to Home screen”":
+        "open het browsermenu en kies daarna “Zet op beginscherm”",
+      "History":
+        "Geschiedenis",
+      "Sign out":
+        "Uitloggen",
+      "← Back to House of Mosaic":
+        "← Terug naar House of Mosaic",
+      "Page moved · House of Mosaic":
+        "Pagina verplaatst · House of Mosaic",
+      "That page has moved":
+        "Die pagina is verplaatst",
+      "House of Mosaic is now a single page. Everything that used to live on its own page is a section of it.":
+        "House of Mosaic is nu één pagina. Alles wat vroeger een eigen pagina had, is er nu een onderdeel van.",
+      "The house":
+        "Het huis",
       "A Caribbean sanctuary for creatives": "Een Caribisch toevluchtsoord voor creatievelingen",
       "A retreat for creators to advance their work. Whether you are working on your next novel, screenplay, or collection of poetry, let the warmth of Aruba fuel your inspiration.": "Een retraite voor makers die aan hun werk willen doorwerken. Of je nu bezig bent met je volgende roman, scenario of dichtbundel: laat de warmte van Aruba je inspiratie voeden.",
       "In partnership with the": "In samenwerking met de",
@@ -715,6 +983,73 @@
       "events · since 2004": "evenementen · sinds 2004"
     },
     pt: {
+      // about.html, club.html, 404.html (8 Nov 2026)
+      "Fernando Mansur · House of Mosaic · Art Villa & Gallery, Aruba":
+        "Fernando Mansur · House of Mosaic · Villa de Arte e Galeria, Aruba",
+      "Art Villa & Gallery":
+        "Villa de Arte e Galeria",
+      "The owner":
+        "O proprietário",
+      "House of Mosaic is one man's house before it is anything else. Fernando grew up in it, opened it to guests on the first of August 2004, and has not stopped decorating since.":
+        "A House of Mosaic é, antes de tudo, a casa de um homem. Fernando cresceu ali, recebeu os primeiros hóspedes em 1º de agosto de 2004 e nunca mais parou de decorar.",
+      "He is the artist as well as the host. The mosaics climbing the walls and walkways, the carved wood and velvet and gold that catch the candlelight, the gallery that keeps filling with new work: it is his hand throughout, and he is usually somewhere on the property, adding to it.":
+        "Ele é o artista e também o anfitrião. Os mosaicos que sobem pelas paredes e passagens, a madeira entalhada, o veludo e o ouro que captam a luz das velas, a galeria que não para de receber obras novas: tudo tem a mão dele, e ele costuma estar em algum canto da propriedade, acrescentando algo.",
+      "He painted the main entrance doors himself. The crest on them came off those doors to become the mark of the house, and it is the same mark at the top of this page.":
+        "Ele mesmo pintou as portas da entrada principal. O brasão que está nelas saiu dessas portas para virar a marca da casa, e é a mesma marca do topo desta página.",
+      "In 2008 he found an 1890 Chinese opium bed in a Dutch antique shop in Curaçao and brought it across the water. It has anchored the house ever since, and the Spa in a Bed ritual takes place inside it.":
+        "Em 2008, ele encontrou uma cama chinesa de ópio de 1890 em um antiquário holandês em Curaçao e atravessou o mar com ela. Desde então ela é o coração da casa, e o ritual Spa in a Bed acontece dentro dela.",
+      "What guests say about him":
+        "O que os hóspedes dizem dele",
+      "The house has designed weddings and celebrations since 1994, and has welcomed guests since 2004. Fernando answers the enquiries himself.":
+        "A casa cria casamentos e celebrações desde 1994 e recebe hóspedes desde 2004. O próprio Fernando responde às mensagens.",
+      "The Inner Circle":
+        "O Inner Circle",
+      "Collect privileges. Unlock member-only experiences.":
+        "Acumule privilégios. Desbloqueie experiências exclusivas para membros.",
+      "Sign in":
+        "Entrar",
+      "Join the circle":
+        "Entre para o círculo",
+      "Your name":
+        "Seu nome",
+      "Password":
+        "Senha",
+      "Forgot password?":
+        "Esqueceu a senha?",
+      "A new key":
+        "Uma nova chave",
+      "Choose a new password for your membership.":
+        "Escolha uma nova senha para a sua associação.",
+      "New password":
+        "Nova senha",
+      "Save & open my card":
+        "Salvar e abrir meu cartão",
+      "Welcome back":
+        "Bem-vindo de volta",
+      "Show this card at the house to collect a stamp.":
+        "Mostre este cartão na casa para ganhar um carimbo.",
+      "Member":
+        "Membro",
+      "MEMBER CODE":
+        "CÓDIGO DE MEMBRO",
+      "Keep your card one tap away:":
+        "Deixe seu cartão a um toque:",
+      "open the browser menu, then “Add to Home screen”":
+        "abra o menu do navegador e depois “Adicionar à Tela de Início”",
+      "History":
+        "Histórico",
+      "Sign out":
+        "Sair",
+      "← Back to House of Mosaic":
+        "← Voltar para a House of Mosaic",
+      "Page moved · House of Mosaic":
+        "Página movida · House of Mosaic",
+      "That page has moved":
+        "Essa página mudou de lugar",
+      "House of Mosaic is now a single page. Everything that used to live on its own page is a section of it.":
+        "A House of Mosaic agora é uma página só. Tudo o que tinha página própria agora é uma seção dela.",
+      "The house":
+        "A casa",
       "Contact": "Contato",
       "Follow": "Siga-nos",
       "© 2026 House of Mosaic · Vacation home rental · Event venue · Art gallery": "© 2026 House of Mosaic · Casa de temporada · Espaço para eventos · Galeria de arte",
