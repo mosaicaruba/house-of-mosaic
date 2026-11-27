@@ -98,6 +98,7 @@ nav a:hover{color:var(--gold-bright)}
   .mark span{display:none}
   .mark b{font-size:1.05rem}
   nav{order:3;width:100%;justify-content:center;gap:8px;font-size:.82rem}
+  nav a{display:flex;align-items:center;min-height:44px}
 }
 
 /* ---------- buttons ---------- */
@@ -127,6 +128,11 @@ nav a:hover{color:var(--gold-bright)}
 .hero h1 em{color:var(--gold-bright);font-variation-settings:'SOFT' 70,'WONK' 0}
 .hero .sub{margin-top:20px;max-width:44ch;color:var(--ivory-soft);font-size:clamp(1rem,2.2vw,1.12rem)}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+/* On a phone the 94svh hero starts below the 100px header, so its bottom-anchored buttons fall past 844px. Let the content set the height. */
+@media(max-width:760px){
+  .hero{min-height:0}
+  .hero .crest{width:56px;margin-bottom:22px}
+}
 .side-tag{position:absolute;right:clamp(14px,2.4vw,34px);top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:.7rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);opacity:.85}
 @media(max-width:999px){.side-tag{display:none}}
 
