@@ -159,7 +159,7 @@ document.getElementById("goBtn").onclick = async function(){
       var r = await SB.auth.signUp({ email: email, password: pass });
       if(r.error) throw r.error;
       if(!r.data.session){ msg.textContent = "Check your email to confirm, then sign in."; btn.disabled=false; return; }
-      await SB.from("profiles").upsert({ id: r.data.user.id, name: name, email: email });
+      await SB.from("profiles").insert({ id: r.data.user.id, name: name, email: email });
     } else {
       var r2 = await SB.auth.signInWithPassword({ email: email, password: pass });
       if(r2.error) throw r2.error;
@@ -225,8 +225,8 @@ async function load(){
   var uid = s.data.session.user.id;
   show(true);
   var pr = await SB.from("profiles").select("name, created_at").eq("id", uid).maybeSingle();
-  if(pr.data === null){ // profile missing (e.g. signup upsert raced), so create it
-    await SB.from("profiles").upsert({ id: uid, email: s.data.session.user.email });
+  if(pr.data === null){ // profile missing (e.g. signup insert raced), so create it
+    await SB.from("profiles").insert({ id: uid, email: s.data.session.user.email });
   }
   var fullName = (pr.data && pr.data.name) || "Member of the house";
   document.getElementById("mcName").textContent = fullName;
