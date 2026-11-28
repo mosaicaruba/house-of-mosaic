@@ -55,6 +55,14 @@ create policy "insert own profile" on public.profiles
 create policy "update own profile" on public.profiles
   for update using (id = auth.uid());
 
+-- Members may only create their row and change name/email. created_at ranks
+-- the member number ("No 001"), so it must not be writable by members. The
+-- policies above choose the row; these column grants choose the columns.
+-- Safe to re-run. Applied to the live project after the club.html change.
+revoke insert, update on public.profiles from anon, authenticated;
+grant insert (id, name, email) on public.profiles to authenticated;
+grant update (name, email) on public.profiles to authenticated;
+
 create policy "staff can read staff" on public.staff
   for select using (public.is_staff());
 
